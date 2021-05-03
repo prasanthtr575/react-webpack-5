@@ -3,6 +3,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 
 const deps = require("./package.json").dependencies;
 const publicPath = `${process.env.BASE_URL}`;
+const port = `${process.env.PORT}`;
 
 module.exports = {
   mode: process.env.NODE_ENV,
@@ -15,7 +16,7 @@ module.exports = {
   },
 
   devServer: {
-    port: 8080,
+    port,
   },
 
   module: {
